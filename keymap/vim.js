@@ -110,7 +110,8 @@
     { keys: 'F<character>', type: 'motion', motion: 'moveToCharacter', motionArgs: { forward: false }},
     { keys: 't<character>', type: 'motion', motion: 'moveTillCharacter', motionArgs: { forward: true, inclusive: true }},
     { keys: 'T<character>', type: 'motion', motion: 'moveTillCharacter', motionArgs: { forward: false }},
-    { keys: ';', type: 'motion', motion: 'repeatLastCharacterSearch', motionArgs: { forward: true }},
+    //{ keys: ';', type: 'motion', motion: 'repeatLastCharacterSearch', motionArgs: { forward: true }},
+    { keys: ':', type: 'motion', motion: 'repeatLastCharacterSearch', motionArgs: { forward: true }},
     { keys: ',', type: 'motion', motion: 'repeatLastCharacterSearch', motionArgs: { forward: false }},
     { keys: '\'<character>', type: 'motion', motion: 'goToMark', motionArgs: {toJumplist: true, linewise: true}},
     { keys: '`<character>', type: 'motion', motion: 'goToMark', motionArgs: {toJumplist: true}},
@@ -201,7 +202,8 @@
     { keys: 'g*', type: 'search', searchArgs: { forward: true, querySrc: 'wordUnderCursor', toJumplist: true }},
     { keys: 'g#', type: 'search', searchArgs: { forward: false, querySrc: 'wordUnderCursor', toJumplist: true }},
     // Ex command
-    { keys: ':', type: 'ex' }
+    //{ keys: ':', type: 'ex' }
+    { keys: ';', type: 'ex' }
   ];
 
   /**
