@@ -4304,6 +4304,8 @@
         var history = cm.doc.history.done;
         var event = history[history.length - 2];
         return event && event.ranges && event.ranges[0].head;
+      } else if (markName == '`' {
+        return vimGlobalState.jumpList.move(-1);
       } else if (markName == '.') {
         if (cm.doc.history.lastModTime == 0) {
           return  // If no changes, bail out; don't bother to copy or reverse history array.

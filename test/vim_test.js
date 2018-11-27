@@ -1716,6 +1716,14 @@ testVim('mark\'', function(cm, vim, helpers) {
   helpers.doKeys('\'', '\'');
   helpers.assertCursorAt(2, 3);
 });
+testVim('mark`', function(cm, vim, helpers) {
+  cm.setCursor(0, 1);
+  helpers.doKeys('m', 'a');
+  cm.setCursor(2, 2);
+  helpers.doKeys('\'', 'a');
+  helpers.doKeys('`', '`');
+  helpers.assertCursorAt(2, 2);
+});
 testVim('mark.', function(cm, vim, helpers) {
   cm.setCursor(0, 0);
   helpers.doKeys('O', 'testing', '<Esc>');
